@@ -1,0 +1,42 @@
+cabal-version:      3.0
+name:               string-counter
+version:            0.1.0.0
+license:            NONE
+author:             Alex Hansen
+maintainer:         alexstur@gmail.com
+build-type:         Simple
+extra-doc-files:    README.md
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    exposed-modules:
+       Application
+    other-modules:
+       Api,
+       Counter,
+       Server
+    build-depends:
+        base ^>=4.17.2.0,
+        containers,
+        mtl,
+        servant,
+        servant-server,
+        stm,
+        text,
+        warp
+
+    hs-source-dirs:   src
+    default-language: GHC2021
+
+executable string-counter
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.17.2.0,
+        string-counter
+
+    hs-source-dirs:   app
+    default-language: GHC2021
