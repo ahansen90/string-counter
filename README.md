@@ -3,8 +3,10 @@ This is a demo project of a simple webserver written in Haskell using the
 Servant web framework.
 
 ## Building and executing
-This project is built using cabal. Use `cabal build` to build the application
-and `cabal exec string-counter` to start the server listening on port 9000.
+This project is built using cabal. Use `cabal build` to build the
+application and `cabal exec string-counter` to start the server listening
+on port 9000. It does use GHC 9 features, so you will need a recent
+version of GHC. I tested it using GHC 9.4.7 and Cabal 3.10.2.0.
 
 ## Notes
 * The application stores the strings and their counts in-memory while the server
